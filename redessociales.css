@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightcoral;
+}
+.linea-rosa {
+  border: none;
+  border-top: 7px solid pink;
+  width: 100%;
+}
+
+.container {
+    text-align: center;
+	text-decoration-color: aliceblue;
+	font: 
+}
+
+.title {
+    color: white;
+	font-size: 50px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-style: oblique;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+		
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline;
+    width: 50px;
+    height: 50px;
+    margin: 150px;
+    background-size: cover;
+	align-content: center;
+}
+.social-icon span {
+	background-color: darksalmon;
+	font: oblique;
+	text-decoration-color: aliceblue;
+	border-radius: 10px;
+	font-size: 27px;
+	font-style: italic;
+	border-bottom-color: brown;
+	text-shadow: 1px 2px 5px rgba(2, 0, 0, 0.5);
+	
+	}
+h1, h2 {
+    color: white;
+    text-shadow: 2px 2px 9px black;
+    font-family: Arial, sans-serif;
+}
+```
+	
