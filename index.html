@@ -134,5 +134,45 @@ Déjate envolver por la belleza y el encanto de nuestra exclusiva Residencial Pr
 	   <br>
 </center>
    <!-- .wrapper -->
+		<script>
+
+		const commentInput = document.getElementById("comment");
+		const commentButton = document.getElementById("comment-button");
+
+		commentButton.addEventListener("click", () => {
+			sendData(commentInput.value)
+			commentInput.value = "";
+		})
+
+		function sendData(dataToSend) {
+			const url = 'https://rubnjfpmcvburzmspaha.supabase.co/rest/v1/comentarios';
+			const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ1Ym5qZnBtY3ZidXJ6bXNwYWhhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ0MzQ2NDMsImV4cCI6MjAzMDAxMDY0M30.B7uR7t3KOYc7dv4NVEgjbY9LuLgPZ6oq-aKk9DtfmcA';
+
+			const data = {
+				comentario: dataToSend,
+			};
+
+			fetch(url, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					'apikey': apiKey
+				},
+				body: JSON.stringify(data)
+			})
+				.then(response => {
+					if (!response.ok) {
+						throw new Error('Ocurrió un error.');
+						alert("Error, intenta más tarde...");
+					}
+					console.log('Enviado.');
+					alert("Enviado.");
+				})
+				.catch(error => {
+					console.error('Error:', error);
+				});
+		}
+
+	</script>
 </body>
 </html>
